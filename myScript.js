@@ -3,13 +3,13 @@ container.classList.add('container');
 document.body.appendChild(container);
 
 //creates n number of divs for grid layout
-let numOfDivs = 16;
+let numOfDivs = 256;
+let divArray = new Array();
 function createDivs(numOfDivs){
-    let divArray = new Array();
     for (i = 0; i < numOfDivs; i++){
         divArray[i] = document.createElement('div');
         divArray[i].classList.add('gridBox');
-        divArray[i].textContent = i + 1;
+        divArray[i].id = i + 1;
         container.appendChild(divArray[i]);
     }
 }

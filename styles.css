@@ -1,8 +1,14 @@
 .container {
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: repeat(16, 60px);
+    grid-auto-rows: 60px;
 }
 
-div > div {
-    margin: 20px;
+.gridBox {
+    color: white;
+    background-color: white;
+}
+
+.gridBox:hover {
+    background-color: black;
 }
