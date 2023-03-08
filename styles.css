@@ -6,9 +6,5 @@
 
 .gridBox {
     color: white;
-    background-color: white;
-}
-
-.gridBox:hover {
-    background-color: black;
+   
 }
