@@ -26,11 +26,12 @@ button.onclick = function(){
         removeGrid();
     }
     //prompt for number of columns
-    let newNumOfColumns = Number(prompt('Enter number of tiles'));
+    let newNumOfColumns = prompUser();
     //variable to store additions to class 'container'
     const gridSquares = document.querySelector('.container')
     //set grid-template-columns to 'repeat(newNumberOfColumns, 60px)
-    gridSquares.style.gridTemplateColumns = `repeat(${newNumOfColumns}, 60px)`;
+    gridSquares.style.gridTemplateColumns = `repeat(${newNumOfColumns}, 1fr)`;
+    gridSquares.style.gridTemplateRows = `repeat(${newNumOfColumns}, 1fr)`
     //creatws newNumOfColumns x newNumOfColumns grid
     createGrid(newNumOfColumns);
 }
@@ -41,4 +42,14 @@ function removeGrid(){
 }
 function addBackgroundColor(e){
     this.style.backgroundColor = 'black';
+}
+function prompUser(){
+    let columns;
+    do {
+        columns = Number(prompt('Enter number of tiles'));
+        if(columns > 100) {
+            alert('Max input: 100');
+        }
+    } while (columns > 100);
+    return columns;
 }

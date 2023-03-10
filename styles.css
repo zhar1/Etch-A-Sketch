@@ -1,9 +1,9 @@
 .container {
     display: grid;
-    grid-auto-rows: 60px;
+    width: 960px;
+    height: 960px;
 }
 
 .gridBox {
-    color: white;
-   
+    color: #ffffff;
 }
