@@ -3,7 +3,7 @@ const button = document.createElement('button');
 container.classList.add('container');
 document.body.appendChild(button);
 document.body.appendChild(container);
-button.textContent = 'select number of boxes';
+button.textContent = 'select number of boxes Squared';
 
 //array to store n number of grids
 const divArray = new Array();
@@ -41,7 +41,7 @@ function removeGrid(){
     divArray.forEach(div => div.remove());
 }
 function addBackgroundColor(e){
-    this.style.backgroundColor = 'black';
+    this.style.backgroundColor = 'white';
 }
 // promts for number of columns in grid
 function prompUser(){
