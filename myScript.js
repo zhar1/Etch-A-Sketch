@@ -20,12 +20,6 @@ function createGrid(numOfColumns){
     }
 }
 
-function addBackgroundColor(e){
-    this.style.backgroundColor = 'black';
-}
-//const divs = document.querySelectorAll('.gridbox')
-//divs.forEach(div => div.addEventListener('click', addBackgroundColor));
-
 button.onclick = function(){
     //check for existing grid
     if(divArray[0]){
@@ -42,10 +36,9 @@ button.onclick = function(){
 }
 
 
-/* next we need to add grid attributes by js (number of cololumns) */
 function removeGrid(){
     divArray.forEach(div => div.remove());
 }
-function resetColor(){
-    divArray.forEach(div => div.style.backgroundColor = 'white');
+function addBackgroundColor(e){
+    this.style.backgroundColor = 'black';
 }
