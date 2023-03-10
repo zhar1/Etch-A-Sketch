@@ -1,1 +1,2 @@
 # Etch-A-Sketch
+For this project I dynamically created of 960px x 960px grid of squares. To start the game press the button at the top of the page. Once pressed you will be prompted for the number of boxes(prompts again if input is greater than 100) in each row(columns), thus forming a square grid. For each div square that the mouse cursor hovers/and or moves over, that specific square will from black to white(leaving a pixelated trail). To play a gain press the button, the previous grid will be deleted, and you will be promted to enter the dimensions again.
