@@ -32,7 +32,7 @@ button.onclick = function(){
     //set grid-template-columns to 'repeat(newNumberOfColumns, 60px)
     gridSquares.style.gridTemplateColumns = `repeat(${newNumOfColumns}, 1fr)`;
     gridSquares.style.gridTemplateRows = `repeat(${newNumOfColumns}, 1fr)`
-    //creatws newNumOfColumns x newNumOfColumns grid
+    //creates newNumOfColumns x newNumOfColumns grid
     createGrid(newNumOfColumns);
 }
 
@@ -43,6 +43,7 @@ function removeGrid(){
 function addBackgroundColor(e){
     this.style.backgroundColor = 'black';
 }
+// promts for number of columns in grid
 function prompUser(){
     let columns;
     do {
