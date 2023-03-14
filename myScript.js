@@ -26,7 +26,7 @@ function createGrid(numOfColumns){
         divArray[i] = document.createElement('div');
         divArray[i].classList.add('gridBox');
         divArray[i].id = i + 1;
-        divArray[i].addEventListener('mouseover', addBackgroundColor);
+        divArray[i].addEventListener('mouseover', changeBackground);
         container.appendChild(divArray[i]);
     }
 }
@@ -51,7 +51,7 @@ button.onclick = function(){
 function removeGrid(){
     divArray.forEach(div => div.remove());
 }
-function addBackgroundColor(e){
+function changeBackground(e){
     if(black){
         this.style.backgroundColor ='black';
     } else if(rbg){
