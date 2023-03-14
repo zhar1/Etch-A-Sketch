@@ -5,7 +5,7 @@ document.body.appendChild(button);
 document.body.appendChild(container);
 button.textContent = 'select number of boxes Squared';
 const blackButton = document.getElementById('black');
-const rgbButton = document.getElementById('rbg');
+const rgbButton = document.getElementById('rgb');
 
 //array to store n number of grids
 const divArray = new Array();
@@ -26,7 +26,7 @@ function createGrid(numOfColumns){
         divArray[i] = document.createElement('div');
         divArray[i].classList.add('gridBox');
         divArray[i].id = i + 1;
-        divArray[i].addEventListener('mouseover', setRandomRgb);
+        divArray[i].addEventListener('mouseover', addBackgroundColor);
         container.appendChild(divArray[i]);
     }
 }
@@ -54,8 +54,10 @@ function removeGrid(){
 function addBackgroundColor(e){
     if(black){
         this.style.backgroundColor ='black';
-    } else if (rbg){
-        this.style.backgroundColor = getRandomRgb;
+    } else if(rbg){
+        this.style.backgroundColor = getRandomRgb();
+    } else {
+        this.style.backgroundColor = 'pink';
     }
 }
 function getRandomRgb(){
