@@ -4,10 +4,21 @@ container.classList.add('container');
 document.body.appendChild(button);
 document.body.appendChild(container);
 button.textContent = 'select number of boxes Squared';
+const blackButton = document.getElementById('black');
+const rgbButton = document.getElementById('rbg');
 
 //array to store n number of grids
 const divArray = new Array();
-
+let black = false;
+let rbg = false;
+blackButton.onclick = function(){
+    black = true;
+    rbg = false;
+}
+rgbButton.onclick = function(){
+    rbg = true; 
+    black = false;
+}
 // creates column_squared number of divs i.e. column * column
 function createGrid(numOfColumns){
     let numOfDivs = (numOfColumns * numOfColumns);
@@ -15,7 +26,7 @@ function createGrid(numOfColumns){
         divArray[i] = document.createElement('div');
         divArray[i].classList.add('gridBox');
         divArray[i].id = i + 1;
-        divArray[i].addEventListener('mouseover', addBackgroundColor);
+        divArray[i].addEventListener('mouseover', setRandomRgb);
         container.appendChild(divArray[i]);
     }
 }
@@ -41,7 +52,15 @@ function removeGrid(){
     divArray.forEach(div => div.remove());
 }
 function addBackgroundColor(e){
-    this.style.backgroundColor = 'white';
+    if(black){
+        this.style.backgroundColor ='black';
+    } else if (rbg){
+        this.style.backgroundColor = getRandomRgb;
+    }
+}
+function getRandomRgb(){
+    let rgb = Math.floor(Math.random()*16777215).toString(16);
+    return '#' + rgb;
 }
 // promts for number of columns in grid
 function prompUser(){

@@ -1,9 +1,15 @@
+body {
+    box-sizing: border-box;
+}
 .container {
     display: grid;
     width: 960px;
     height: 960px;
+    border: 4px solid black;
 }
 
 .gridBox {
-    background-color: #000000;
+    background-color: white;
+    border: 2px solid black;
+    margin: 2px;
 }
