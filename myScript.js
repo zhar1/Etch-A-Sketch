@@ -57,7 +57,7 @@ function changeBackground(e){
     } else if(rbg){
         this.style.backgroundColor = getRandomRgb();
     } else {
-        this.style.backgroundColor = 'pink';
+        this.style.backgroundColor = 'black';
     }
 }
 function getRandomRgb(){
